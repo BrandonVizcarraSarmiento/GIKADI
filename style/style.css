@@ -1,0 +1,320 @@
+img {
+  width: 100%;
+  height: 100%;
+}
+.img-c {
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo personalizado para las imágenes del slider */
+#carouselExample .carousel-inner img {
+  width: auto;
+  height: 40vw; /*max-height: 600px; Ajusta la altura máxima según tus necesidades */
+  margin: 0 auto; /* Centra horizontalmente las imágenes en el slider */
+}
+/* Eliminar completamente los triángulos en los enlaces dropdown */
+.navbar-nav .nav-item.dropdown .dropdown-toggle::after {
+  content: none;
+}
+
+/* Estilos personalizados para ul y li */
+ul,
+ol {
+  list-style: none; /* Elimina las viñetas de las listas */
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding-left: 20px; /* Espaciado a la izquierda para listas no ordenadas */
+}
+
+li {
+  margin-bottom: 10px; /* Espaciado entre elementos de la lista */
+}
+
+/* Estilos para listas anidadas */
+li ul {
+  margin-top: 5px; /* Espaciado entre listas anidadas y elementos anteriores */
+  padding-left: 20px; /* Espaciado a la izquierda para listas anidadas */
+}
+/* Elimina la línea inferior azul y cambia el color de texto a negro */
+li a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: #000; /* Cambia el color del texto a negro */
+}
+
+.navbar {
+  padding: 1rem;
+  background-color: rgb(242, 250, 247);
+}
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-link {
+  color: #000000;
+}
+
+/* Estilo para el enlace "Mujer" cuando se coloca el cursor sobre él */
+.nav-item:hover .dropdown-menu {
+  display: block; /* Muestra el menú desplegable al pasar el cursor sobre "Mujer" */
+}
+
+/*-------------------------------------*/
+/* Estilos del botón de menú */
+.menu-button {
+  display: none;
+  position: relative;
+  left: 20px;
+  z-index: 3; /* Z-index mayor que el del contenido principal */
+  cursor: pointer;
+}
+
+/* Estilos del menú desplegable */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 100%; /* Inicialmente oculto */
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  transition: left 0.3s;
+  z-index: 20; /* Z-index más alto que el del contenido principal */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 10px;
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Estilos del contenido principal */
+.content {
+  padding: 20px;
+  z-index: 2; /* Z-index menor que el del menú */
+}
+
+/* Estilos del botón de cierre del menú */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* Media query para mostrar el menú cuando la pantalla sea menos de 800px */
+@media (max-width: 800px) {
+  .menu {
+    left: 0;
+  }
+  .content {
+    margin-left: 250px;
+  }
+}
+
+/*-------------------------------------*/
+/*SECCION DE MUJERES DE COMPRAS*/
+.destacados {
+  text-align: center;
+}
+
+.compras {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.pago {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #b3d7ff; /* Borde celeste */
+  padding: 5px;
+}
+
+.pago-icon {
+  color: #ffffff; /* Color celeste */
+}
+
+.card-img-top {
+  border: 3px solid #3694ff; /* Borde celeste */
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/*-----------------------------------*/
+
+/*-----------------------------------*/
+
+/* Estilos personalizados para el footer */
+.footer-container {
+  background-color: #845ec2;
+  color: white;
+  padding: 18px 0;
+}
+
+.footer-heading {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column {
+  padding: 10px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list-heading {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-list-item {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.footer-map {
+  display: flex;
+}
+
+.footer-icon {
+  margin-right: 10px;
+}
+
+.footer-map-ubi {
+  margin-bottom: 20px;
+}
+
+.footer-map-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-mapa {
+  width: 280px;
+  height: 200px;
+  margin-top: 2px;
+  border-radius: 5px;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.footer-map {
+  width: 100%;
+  height: 100%;
+}
+.footer-yape img {
+  height: 50px;
+  width: 50px;
+}
+
+/*-----------------------------------*/
+
+/*-----------------------------------*/
+/*codigo de boton de whatsapp*/
+.contac {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10; /* Para que esté por encima de otros elementos */
+}
+
+.contac .btn {
+  font-size: 24px;
+  background-color: #25d366; /* Verde de WhatsApp */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease; /* Transición para el cambio de color */
+}
+
+.contac .btn i {
+  font-size: 30px;
+}
+
+/* Estilo para el mensaje emergente */
+.tooltip-text {
+  display: none;
+  background-color: #25d366; /* Verde */
+  color: #fff;
+  position: absolute;
+  top: 12px;
+  right: 65px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.contac:hover .tooltip-text {
+  display: block;
+}
+
+/*-----------------------------------*/
+
+/* CSS para ocultar seccion-ocultar en el menú desplegable */
+@media screen and (min-width: 768px) {
+  .dropdown-menu .seccion-ocultar {
+    display: block; /* Oculta seccion-ocultar en pantallas más grandes */
+  }
+}
+
+/* CSS para mostrar seccion-ocultar al hacer clic en seccion-forma en pantallas pequeñas */
+@media screen and (max-width: 767px) {
+  .menu-button {
+    display: block;
+  }
+  .dropdown-menu .seccion-forma:hover .seccion-ocultar {
+    display: block; /* Muestra seccion-ocultar al hacer clic en seccion-forma en pantallas pequeñas */
+  }
+  .dropdown-menu .seccion-forma .seccion-ocultar {
+    display: none; /* Oculta seccion-ocultar en pantallas pequeñas por defecto */
+  }
+  .container {
+    text-align: center;
+  }
+  .footer-mapa {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .footer-mapa {
+    width: 200px;
+    height: 150px;
+    margin: 0 auto;
+  }
+}

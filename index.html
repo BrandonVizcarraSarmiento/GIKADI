@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <title>Gikadi</title>
+  <link rel="icon" href="/img/logo.png" />
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <!-- Menú desplegable -->
+    <div class="menu" id="menu">
+      <div class="close-button" onclick="toggleMenu()">&times;</div>
+      <br />
+      <ul>
+        <li><a href="#" class="titulo-a">GIKADI</a></li>
+        <li><a href="#mujeres" onclick="toggleMenu()">Mujeres</a></li>
+        <li><a href="#hombres" onclick="toggleMenu()">Hombres</a></li>
+        <li><a href="#accesorios" onclick="toggleMenu()">Accesorios</a></li>
+        <li><a href="#contactos" onclick="toggleMenu()">Contacto</a></li>
+        <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
+        <li><a class="dropdown-item" href="#">Crear cuenta</a></li>
+      </ul>
+      <form class="d-flex ms-2 mb-2" role="search">
+        <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" />
+        <button class="btn" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+    </div>
+    <!-- barra de navegacion -->
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+      <div class="container-fluid">
+        <!-- Botón de menú -->
+        <div class="menu-button" onclick="toggleMenu()">&#9776;</div>
+        <a class="navbar-brand" href="#">Gikadi</a>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav d-flex justify-content-center ms-auto">
+            <!-- mujeres -->
+            <li class="nav-item">
+              <a class="nav-link" href="#mujeres">Mujer</a>
+            </li>
+            <!-- Hombres -->
+            <li class="nav-item">
+              <a class="nav-link" href="#hombres">Hombres</a>
+            </li>
+            <!-- Accesorios -->
+            <li class="nav-item">
+              <a class="nav-link" href="#accesorios">Accesorio</a>
+            </li>
+          </ul>
+          <!-- Login -->
+          <ul class="navbar-nav mb-0 mb-lg-0 ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" aria-expanded="false">
+                <i class="bi bi-person"></i>
+              </a>
+              <ul class="dropdown-menu aparecer-login" aria-labelledby="navbarDropdown4">
+                <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Crear cuenta</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Ubicacion -->
+          <ul class="navbar-nav mb-2 mb-lg-0 ms-1">
+            <li class="nav-item">
+              <a class="nav-link" href="#contactos">
+                <i class="bi bi-geo-alt-fill"></i>
+              </a>
+            </li>
+          </ul>
+          <!-- Buscador -->
+          <form class="d-flex ms-2 mb-2" role="search">
+            <input class="form-control" type="search" placeholder="Buscar..." aria-label="Search" />
+            <button class="btn" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- slider -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/NewIn-Banner-1.jpg" class="d-block w-100" alt="Imagen 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/NewIn-Banner-2.jpg" class="d-block w-100" alt="Imagen 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/invierno-banner.jpg" class="d-block w-100" alt="Imagen 3" />
+        </div>
+        <div class="carousel-item">
+          <img src="img/accesorio.jpg" class="d-block w-100" alt="Imagen 4" />
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </a>
+    </div>
+  </header>
+  <br />
+  <!-- main -->
+  <main>
+    <!-- Seccion de mujeres -->
+    <section id="mujeres">
+      <h2 class="destacados">Destacados de mujeres</h2>
+      <!-- card mujeres -->
+      <section class="compras">
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/chaqueta01.jpg" class="card-img-top" alt="img de producto" /></a>
+          <div class="card-body">
+            <h5 class="card-title">CASACA COLUMBIA POWDER LITE MUJER</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/AbrigoPolarM.jpg" class="card-img-top" alt="img de producto" />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">ABRIGO POLAR CATERPILLAR</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/ChaquetaPeludo.jpg" class="card-img-top" alt="img de producto" /></a>
+
+          <div class="card-body">
+            <h5 class="card-title">CHAQUETA PELUDO DOITE DORSET MUJER</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/ZapatosMujer.jpg" class="card-img-top" alt="img de producto" /></a>
+          <div class="card-body">
+            <h5 class="card-title">ZAPATO DOITE CAÑA ALTA SIROK MUJER</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Seccion de hombres -->
+    <section id="hombres">
+      <h2 class="destacados">Destacados de hombres</h2>
+      <!-- card hombres -->
+      <section class="compras">
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/chaqueta02.jpg" class="card-img-top" alt="img de producto" /></a>
+          <div class="card-body">
+            <h5 class="card-title">CASACA COLUMBIA GRAND WALL SHERPA</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/ChaquetaPeludoHombre.jpg" class="card-img-top" alt="img de producto" /></a>
+          <div class="card-body">
+            <h5 class="card-title">CHAQUETA DOITE PELUDO PARDO</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/ChaquetaHombre.jpg" class="card-img-top" alt="img de producto" /></a>
+          <div class="card-body">
+            <h5 class="card-title">CHAQUETA DOITE AUSTRALIS HOMBRE</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/ZapatosHombre.jpg" class="card-img-top" alt="img de producto" /></a>
+          <div class="card-body">
+            <h5 class="card-title">ZAPATO DOITE CAÑA ALTA GORK HOMBRE</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- Seccion de accesorio -->
+    <section id="accesorios">
+      <h2 class="destacados">Accesorios destacados</h2>
+      <!-- card accesorios -->
+      <section class="compras">
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/mochila.jpg" class="card-img-top" alt="img de producto" /></a>
+          <div class="card-body">
+            <h5 class="card-title">COOLER DOITE TARPAULIN SACK</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/linterna.jpg" class="card-img-top" alt="img de producto" /></a>
+          <div class="card-body">
+            <h5 class="card-title">LINTERNA DOITE LED SILVERADO</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/cocinilla.jpg" class="card-img-top" alt="img de producto" /></a>
+          <div class="card-body">
+            <h5 class="card-title">COCINILLA COMPACTA DOITE ROCKET</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+        <div class="card" style="width: 16rem">
+          <a class="img-c" href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+            <img src="img/setOlla.jpg" class="card-img-top" alt="img de producto" /></a>
+          <div class="card-body">
+            <h5 class="card-title">SET DE OLLA II DOITE</h5>
+            <p class="card-text">$50</p>
+          </div>
+          <div class="pago">
+            <a href="#" class="btn btn-primary pago-icon"><i class="bi bi-cart3"></i></a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer id="contactos" class="footer-container">
+    <!-- pie de pagina -->
+    <section class="container footer-content">
+      <p class="footer-heading">Gikadi</p>
+      <div class="row">
+        <div class="col-md-4 footer-column">
+          <div>
+            <div class="footer-map-ubi">
+              <div>
+                <i class="bi bi-geo-alt-fill footer-icon"></i><a class="footer-map-text footer-link"
+                  href="">Ubicanos</a>
+              </div>
+              <div>
+                <a href="" class="footer-link">MERCADILLO BOLOGNESI K398-399 URBANIZACIÓN BACIGALUPO CALLE
+                  SAN CARLOS</a>
+              </div>
+            </div>
+            <div class="footer-mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.5419490856098!2d-70.23880591668554!3d-18.000035472188696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915ac5c5b31c6fd9%3A0x907ba782e648d2e9!2sMercadillo%20Bolognesi!5e0!3m2!1ses-419!2spe!4v1695248517271!5m2!1ses-419!2spe"
+                width="200" height="200" style="border: 1" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="footer-map"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 footer-column">
+          <div class="row">
+            <div class="col-md-6 footer-column">
+              <ul class="footer-list">
+                <p class="footer-list-heading">Categorias</p>
+                <li class="footer-list-item">
+                  <a href="#" class="footer-link">Mujeres</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="#" class="footer-link">Hombres</a>
+                </li>
+                <li class="footer-list-item">
+                  <a href="#" class="footer-link">Accesorios</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 footer-column">
+              <ul class="footer-list">
+                <p class="footer-list-heading">Contactos</p>
+                <li class="footer-list-item">
+                  <i class="bi bi-facebook footer-icon"></i>
+                  <a href="https://web.facebook.com/profile.php?id=100057164722298" class="footer-link"
+                    target="_blank">Facebook</a>
+                </li>
+                <li class="footer-list-item">
+                  <i class="bi bi-whatsapp footer-icon"></i>
+                  <a href="https://www.whatsapp.com/?lang=es_LA" class="footer-link" target="_blank">Whatsapp</a>
+                </li>
+                <li>
+                  <i class="bi bi-envelope-fill footer-icon"></i>
+                  <a href="#" class="footer-link" target="_blank">Correo</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="footer-list-heading">Pagos</p>
+            <a class="footer-yape" href=""><img src="img/yape.png" alt=""></a>
+            <a class="footer-yape" href=""><img src="img/bcp.png" alt=""></a>
+          </div>
+        </div>
+    </section>
+    <!-- whatsapp -->
+    <div class="contac">
+      <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+        <button type="button" class="btn">
+          <i class="bi bi-whatsapp"></i>
+        </button>
+      </a>
+      <!-- Mensaje emergente -->
+      <div class="tooltip-text">Contactanos</div>
+    </div>
+  </footer>
+  <!-- JavaScript para controlar el menú desplegable -->
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      if (menu.style.left === "0px") {
+        menu.style.left = "100%";
+        content.style.marginLeft = "0";
+      } else {
+        menu.style.left = "0px";
+        content.style.marginLeft = "250px";
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="JavaScript/slider.js"></script>
+</body>
+
+</html>
